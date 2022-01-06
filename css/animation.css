@@ -1,0 +1,35 @@
+
+@keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-70deg);
+        transform: rotateX(-70deg) ;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg) ;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+    }
+}
+
+@keyframes slide-rotate-hor-top {
+    0% {
+        -webkit-transform: translateY(-60%) translateX(-50%) rotateX(-45deg);
+        transform: translateY(-60%) translateX(-50%) rotateX(45deg);
+    }
+    100% {
+        -webkit-transform: translateY(-50%) translateX(-50%) rotateX(0deg);
+        transform: translateY(-50%) translateX(-50%) rotateX(0deg);
+    }
+}
+
+@keyframes bgShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
