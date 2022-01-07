@@ -15,6 +15,34 @@ body {
     --button-bg: #3e9ffd;
     --border-clr: #636363;
     font-family: 'Helvetica Heue', sans-serif;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    z-index: -1;
+}
+
+.background--bg1 {
+    background-image: url("../images/bg1.jpg");
+    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
+}
+
+.background--bg2 {
+    background-image: url("../images/bg2.jpg");
+    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
+}
+
+.background--bg3 {
+    background-image: url("../images/bg3.jpg");
+    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
 }
 
 .form {
@@ -23,34 +51,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-    /*background: url("../images/bg2.jpg");*/
     perspective: 800px;
-}
-
-/*.form--bg1::after {*/
-/*    background-image: url("../images/bg1.jpg");*/
-/*}*/
-
-.form.form--bg2::after {
-    background-image: url("../images/bg2.jpg");
-}
-
-.form.form--bg3::after {
-    background-image: url("../images/bg3.jpg");
-}
-
-.form::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/bg1.jpg");
-    background-size: cover;
-    background-position: center;
-    animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    z-index: -1;
 }
 
 .form__wrapper {

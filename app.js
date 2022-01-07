@@ -1,20 +1,47 @@
-const bgContainer = document.querySelector('.form')
+const bgContainer = document.querySelector('.background')
 
-const bgClasses = ['form form--bg1', 'form form--bg2', 'form form--bg3']
+bgClasses = ['background background--bg1', 'background background--bg2', 'background background--bg3']
 
-if (!document.cookie) {
-    bgContainer.classList = bgClasses[Math.floor(Math.random()*bgClasses.length)];
-}
-
-console.log(document.cookie)
-
-let cookieName = 'isActive';
 // Set a Cookie
-function setCookie(cName, cValue) {
+function setCookie(cName, cValue, expSecs) {
     let date = new Date();
-    date.setTime(date.getTime() + (8 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + expSecs);
     const expires = "expires=" + date.toUTCString();
     document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
 }
-// Apply setCookie
-setCookie('bgChange', cookieName);
+
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function initialImg() {
+    if (document.cookie) {
+        bgContainer.className = getCookie('bgName')
+    } else {
+        console.log('document.cookie')
+        const getPic = bgClasses[Math.floor(Math.random() * bgClasses.length)];
+        setCookie('bgName', getPic, 10000);
+        bgContainer.className = getPic
+        console.log(document.cookie);
+    }
+}
+
+initialImg()
+
+setInterval(() => {
+    const cookieValue = getCookie('bgName')
+
+    if (!cookieValue) {
+        console.log('document.cookie')
+        const getPic = bgClasses[Math.floor(Math.random() * bgClasses.length)];
+        setCookie('bgName', getPic, 10000);
+        bgContainer.className = getPic
+        console.log(document.cookie);
+    }
+}, 2000)
+
+
+
