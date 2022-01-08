@@ -16,6 +16,7 @@ body {
     --border-clr: #636363;
     font-family: 'Helvetica Heue', sans-serif;
     position: relative;
+    overflow: hidden;
 }
 
 .background {
@@ -91,12 +92,12 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    perspective: 510px;
+    perspective: 1810px;
     width: 100px;
     height: 100px;
     background: #fff;
     border-radius: 17px;
-    animation: 1s slide-rotate-hor-top cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: 1s slide-rotate-hor-top ease-in-out both;
     -webkit-box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
     -moz-box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
     box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
@@ -112,12 +113,12 @@ body {
 
 .form__logo-square.--red {
     background-color: #d13658;
-    animation-delay: .15s;
+    animation-delay: .05s;
 }
 
 .form__logo-square.--green {
     background-color: #4ebf49;
-    animation-delay: .34s;
+    animation-delay: .12s;
 }
 
 .form__logo-square.--blue {
@@ -126,7 +127,7 @@ body {
 
 .form__logo-square.--orange {
     background-color: #f8911d;
-    animation-delay: .21s;
+    animation-delay: .1s;
 }
 
 .from__logo-container {

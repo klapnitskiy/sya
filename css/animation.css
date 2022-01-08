@@ -15,27 +15,29 @@
 
 @keyframes slide-rotate-hor-top {
     0% {
-        -webkit-transform: translateY(-80%) translateX(-50%) rotateX(65deg);
-        transform: translateY(-80%) translateX(-50%) rotateX(65deg);
+        -webkit-transform: translateY(-80%) translateX(-50%) rotateX(60deg);
+        transform: translateY(-80%) translateX(-50%) rotateX(60deg);
 
     }
     100% {
         -webkit-transform: translateY(-50%) translateX(-50%) rotateX(0deg);
         transform: translateY(-50%) translateX(-50%) rotateX(0deg);
-
     }
 }
 
 @keyframes slide-rotate-hor-top-square {
     0% {
-        -webkit-transform: translateY(30px) translateZ(260px) rotateX(-90deg);
-        transform: translateY(30px) translateZ(260px) rotateX(-90deg);
-        padding: 140px;
+        -webkit-transform: translateY(-30px) translateZ(560px) rotateX(-50deg);
+        transform: translateY(-30px) translateZ(560px) rotateX(-50deg);
+        padding: 200px;
+    }
+    70% {
+        padding: 0;
     }
     100% {
         -webkit-transform: translateY(0) translateZ(0) rotateX(0deg);
         transform: translateY(0) translateZ(0) rotateX(0deg);
-        padding: 0;
+
     }
 }
 
