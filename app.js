@@ -1,4 +1,5 @@
-window.addEventListener('load',() => {
+window.addEventListener('load', () => {
+    "use strict";
     const bgContainer = document.querySelector('.background');
     const bgClasses = ['background background--bg1', 'background background--bg2', 'background background--bg3'];
     const COOKIE_NAME = 'bgName';
@@ -14,15 +15,15 @@ window.addEventListener('load',() => {
 
     function getCookie(name) {
 
-        let cookies = undefined;
+        let cookies = '';
 
         if (document.cookie) {
             document.cookie.split(';').forEach(item => {
-                const [cookieName, cookieValue] = item.split('=')
+                const [cookieName, cookieValue] = item.split('=');
                 if (cookieName === name) {
                     cookies = cookieValue;
                 }
-            })
+            });
         }
 
         return cookies;
@@ -33,13 +34,13 @@ window.addEventListener('load',() => {
 
 
         if (bgClass) {
-            setClassAnim(bgClass)
+            setClassAnim(bgClass);
         } else {
             setImg();
         }
     }
 
-    function setClassAnim (bgClassName) {
+    function setClassAnim(bgClassName) {
         bgContainer.classList.add('fadeOut');
         bgContainer.addEventListener('transitionend', () => {
             bgContainer.className = bgClassName;
@@ -60,4 +61,4 @@ window.addEventListener('load',() => {
             setImg();
         }
     }, COOKIE_INTERVAL);
-})
+});

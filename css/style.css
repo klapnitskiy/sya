@@ -30,8 +30,6 @@ body {
     z-index: -1;
 }
 
-/*transition: 1s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
-
 .fadeOut {
     opacity: 0;
 }
@@ -70,7 +68,7 @@ body {
     box-shadow: 4px 4px 37px 6px rgba(34, 60, 80, 0.22);
     backdrop-filter: blur(3px);
     animation: 1s swing-in-top-fwd cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    perspective: 250px;
+    perspective: 550px;
 }
 
 .form__wrapper::after {
@@ -86,13 +84,61 @@ body {
 }
 
 .form__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    perspective: 510px;
     width: 100px;
-    height: 104px;
+    height: 100px;
+    background: #fff;
+    border-radius: 17px;
     animation: 1s slide-rotate-hor-top cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
+    -moz-box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
+    box-shadow: 4px 4px 24px 0 rgba(34, 60, 80, 0.07);
+}
+
+.form__logo-square {
+    width: 28px;
+    height: 28px;
+    opacity: .7;
+    border-radius: 5px;
+    animation: .5s slide-rotate-hor-top-square cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.form__logo-square.--red {
+    background-color: #d13658;
+    animation-delay: .15s;
+}
+
+.form__logo-square.--green {
+    background-color: #4ebf49;
+    animation-delay: .34s;
+}
+
+.form__logo-square.--blue {
+    background-color: #3e9ffd;
+}
+
+.form__logo-square.--orange {
+    background-color: #f8911d;
+    animation-delay: .21s;
+}
+
+.from__logo-container {
+    position: absolute;
+}
+
+.from__logo-container.--first {
+    transform: translate(-25%, -12%);
+}
+
+.from__logo-container.--second {
+    transform: translate(25%, 12%);
 }
 
 .form__title {
@@ -103,7 +149,7 @@ body {
 .form__subtitle {
     font-size: 15px;
     font-weight: 400;
-    opacity: 50%;
+    opacity: .5;
 }
 
 .form__header {

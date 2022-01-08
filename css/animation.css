@@ -1,14 +1,13 @@
-
 @keyframes swing-in-top-fwd {
     0% {
         -webkit-transform: rotateX(-70deg);
-        transform: rotateX(-70deg) ;
+        transform: rotateX(-70deg);
         -webkit-transform-origin: top;
         transform-origin: top;
     }
     100% {
         -webkit-transform: rotateX(0deg);
-        transform: rotateX(0deg) ;
+        transform: rotateX(0deg);
         -webkit-transform-origin: top;
         transform-origin: top;
     }
@@ -16,12 +15,27 @@
 
 @keyframes slide-rotate-hor-top {
     0% {
-        -webkit-transform: translateY(-60%) translateX(-50%) rotateX(-45deg);
-        transform: translateY(-60%) translateX(-50%) rotateX(45deg);
+        -webkit-transform: translateY(-80%) translateX(-50%) rotateX(65deg);
+        transform: translateY(-80%) translateX(-50%) rotateX(65deg);
+
     }
     100% {
         -webkit-transform: translateY(-50%) translateX(-50%) rotateX(0deg);
         transform: translateY(-50%) translateX(-50%) rotateX(0deg);
+
+    }
+}
+
+@keyframes slide-rotate-hor-top-square {
+    0% {
+        -webkit-transform: translateY(30px) translateZ(260px) rotateX(-90deg);
+        transform: translateY(30px) translateZ(260px) rotateX(-90deg);
+        padding: 140px;
+    }
+    100% {
+        -webkit-transform: translateY(0) translateZ(0) rotateX(0deg);
+        transform: translateY(0) translateZ(0) rotateX(0deg);
+        padding: 0;
     }
 }
 
