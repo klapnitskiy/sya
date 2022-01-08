@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Helvetica Heue';
-    src: url('../fonts/HelveticaNeueCyr-Light.woff2' format('woff2'));
+    src: url('../fonts/HelveticaNeueCyr-Light.woff2');
 }
 
 body {
@@ -26,23 +26,26 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    transition: 1s all ease-in-out;
     z-index: -1;
+}
+
+/*transition: 1s opacity cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+
+.fadeOut {
+    opacity: 0;
 }
 
 .background--bg1 {
     background-image: url("../images/bg1.jpg");
-    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
 }
 
 .background--bg2 {
     background-image: url("../images/bg2.jpg");
-    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
 }
 
 .background--bg3 {
     background-image: url("../images/bg3.jpg");
-    /*animation: 4s bgShow 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;*/
 }
 
 .form {
@@ -66,7 +69,7 @@ body {
     -moz-box-shadow: 4px 4px 37px 6px rgba(34, 60, 80, 0.22);
     box-shadow: 4px 4px 37px 6px rgba(34, 60, 80, 0.22);
     backdrop-filter: blur(3px);
-    animation: swing-in-top-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: 1s swing-in-top-fwd cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
     perspective: 250px;
 }
 
